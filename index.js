@@ -8,7 +8,7 @@ class Circle {
   }
 
   set diameter(diameter) {
-    this.radius = diameter * 2
+    this.radius = diameter / 2
   }
 
   get circumference() {
@@ -16,7 +16,7 @@ class Circle {
   }
 
   set circumference(circumference) {
-    this.radius = (circumference * Math.PI)
+    this.radius = (circumference / 2) / Math.PI
   }
 
   get area() {
@@ -24,13 +24,6 @@ class Circle {
   }
 
   set area(area) {
-    this.radius = (Math.sqrt(area)) * Math.PI
+    this.radius = Math.sqrt(area / Math.PI)
   }
-
 }
-
-let test = new Circle(6)
-console.log("Radius: ", test.radius)
-console.log("Diameter: ", test.diameter)
-console.log("Circumference: ", test.circumference)
-console.log("Area: ", test.area)
